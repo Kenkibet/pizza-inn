@@ -43,6 +43,12 @@ $(document).ready((e) => {
     $("#print").click(function (event) {
         event.preventDefault();
         alert("Thank you for choosing Ken's Pizza . Your order will be delivered shortly");
+        resetForm();
+    });
+
+    $("#close").click(function (event) {
+        event.preventDefault();
+        document.getElementById("delivery-form").style.display = "none";
     });
 
     $("#inhouse").click(function (event) {
@@ -84,7 +90,7 @@ $(document).ready((e) => {
         document.getElementById('cartItems').innerHTML = " ";
 
         for (var i = 0; i < cartItems.length; i++) {
-            orderLi = `<li class="list-group-item">${cartItems[i]}</li>`;
+            orderLi = `<p class="my-1">${cartItems[i]}</p>`;
             document.getElementById('cartItems').innerHTML += orderLi;
         }
 
