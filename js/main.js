@@ -71,7 +71,7 @@ $(document).ready((e) => {
         cartTotal += pizza.price;
         
         var order = "Size: " + pizza.size + ";Topping: " + pizza.topping + "; Crust: " + pizza.crust + "; Price: " + pizza.price + "/="
-        var total = "Cart Total: " + cartTotal;
+        var total = `Cart Total: <span class="float-right font-weight-bold">${cartTotal}</span>`;
         
         document.getElementById('orderList').innerHTML = order;
         document.getElementById('cartTotal').innerHTML = total;
@@ -80,7 +80,7 @@ $(document).ready((e) => {
         document.getElementById('cartItems').innerHTML = " ";
 
         for (var i = 0; i < cartItems.length; i++) {
-            orderLi = "<li>" + cartItems[i] + "</li>";
+            orderLi = `<li class="list-group-item">${cartItems[i] }</li>`;
             document.getElementById('cartItems').innerHTML += orderLi;
         }
             
