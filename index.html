@@ -35,7 +35,7 @@
             <div class="col-md-8 shadow py-5 px-3" data-aos="fade-up">
                 <h3 class="display-4">Select your Pizza:</h3>
                 <label for="pizza-size">
-                    <p class="lead text-muted text-bold">Step 1: Pizza Size:</p>
+                    <p class="lead text-muted font-weight-bold">Step 1: Pizza Size:</p>
                 </label>
                 <div id="piza-size" class="row justify-content-center">
                     <div class="col-sm-4">
@@ -60,15 +60,42 @@
 
                 <div class="form-group">
                     <label for="topping">
-                        <p class="lead text-muted text-bold">Step 2: And topping to your pizza:</p>
+                        <p class="lead text-muted font-weight-bold">Step 2: And topping to your pizza:</p>
                     </label>
                     <select id="topping" class="form-control">
-                        <option>Hawaian</option>                        
+                        <option>Hawaian</option>
                         <option>Barbeque</option>
                         <option>Chicken and Cheese</option>
                         <option>Peperoni</option>
                         <option>Chicken Tikka</option>
                     </select>
+                </div>
+
+                <hr>
+
+                <div class="w-100">
+                    <label for="crust">
+                        <p class="lead text-muted font-weight-bold">Step 3: Add crust to your pizza :</p>
+                    </label>
+                    <div id="crust" class="row justify-content-center">
+                        <div class="col-md-4">
+                            <label class="radio-inline">
+                                <input name="pizzaCrust" id="crust-crispy" value="crispy" type="radio" /> Crispy crust
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="radio-inline">
+                                <input name="pizzaCrust" id="crust-stuffed" value="stuffed" type="radio" /> Stuffed
+                                crust
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="radio-inline">
+                                <input name="pizzaCrust" id="crust-free" value="sugar-free" type="radio" /> Surprise me!
+                            </label>
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
