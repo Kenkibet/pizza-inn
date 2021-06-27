@@ -36,11 +36,37 @@ pizza.prototype.totalCost = function () {
     }
 };
 
+var cartItems = [];
+var cartTotal = 0;
+
 $(document).ready((e) => {
     $("#print").click(function (event) {
         event.preventDefault();
         alert("Thank you for choosing Ken's Pizza . Your order will be delivered shortly");
     });
+
+    $("#inhouse").click(function (event) {
+        event.preventDefault();
+        alert("Thank you for choosing Ken's Pizza . Your order will be delivered shortly");
+        resetForm();
+    });
+
+    $("#homeDelivery").click(function (event) {
+        event.preventDefault();
+        document.getElementById("delivery-form").style.display = "block";
+        resetForm();
+
+    });
+
+    function resetForm() {
+        cartItems = [];
+        cartTotal = 0;
+
+        document.getElementById('orderList').innerHTML = " ";
+        document.getElementById('cartTotal').innerHTML = " ";
+        document.getElementById('cartTotal').innerHTML = " ";
+
+    }
 
 
 });
