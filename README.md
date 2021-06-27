@@ -15,7 +15,7 @@ https://kenkibet.github.io/pizza-inn/
 
 * git clone ```https://github.com/Kenkibet/pizza-inn.git```
 
-* cd Delani-Studio
+* cd pizza-in
 
 * code . or atom . depending on the text editor of your choise.
 
