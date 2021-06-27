@@ -35,3 +35,12 @@ pizza.prototype.totalCost = function () {
             break;
     }
 };
+
+$(document).ready((e) => {
+    $("#print").click(function (event) {
+        event.preventDefault();
+        alert("Thank you for choosing Ken's Pizza . Your order will be delivered shortly");
+    });
+
+
+});

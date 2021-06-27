@@ -105,7 +105,7 @@
                 </form>
 
             </div>
-            <div class="col shadow py-5 px-3 mx-2">
+            <div class="col shadow py-5 px-3 mx-2"  data-aos="fade-up" data-aos-delay="200">
                 <div class="cart">
                     <h5>Your cart :</h5>
                     <ul id="cartItems"></ul>
@@ -113,9 +113,9 @@
                 </div>
 
                 <div class="delivery">
-                    <h4>Select delivery</h4>
-                    <button type="submit" id="inhouseDelivery" class="btn btn-success">Eating Inhouse</button>
-                    <button type="submit" id="homeDelivery" class="btn btn-info">Deliver to the House</button>
+                    <h4>Select delivery method</h4>
+                    <button type="submit" id="inhouseDelivery" class="btn btn-success">Inhouse Order</button>
+                    <button type="submit" id="homeDelivery" class="btn btn-info">Home Delivery</button>
                 </div>
 
                 <div class="py-4" id="delivery-form">
@@ -140,7 +140,7 @@
                             <input type="tel" placeholder="Phone number" class="form-control" name="phone" required>
                         </div>
 
-                        <button type="submit" id="printButton" class="btn btn-info">Print Delivery</button>
+                        <button type="submit" id="print" class="btn btn-info">Print Delivery Note</button>
                         <button type="submit" class="btn btn-danger" onclick="closeForm()">Close</button>
                     </form>
                 </div>
