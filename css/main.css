@@ -45,6 +45,17 @@
   padding: 30px 0 15px;
 }
 
-.fancy{
-    font-family: 'Dancing Script', cursive;
+.fancy {
+  font-family: 'Dancing Script', cursive;
+}
+
+.subfooter {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ddd;
+  background: #101010;
+  padding: 30px 0;
+  text-align: center;
+  z-index: 1;
 }
