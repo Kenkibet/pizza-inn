@@ -2,3 +2,12 @@
     display: none;   
     z-index: 9;
   }
+
+  .masthead {
+    height: 60vh;
+    min-height: 500px;
+    background-image: url('../images/piza.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
