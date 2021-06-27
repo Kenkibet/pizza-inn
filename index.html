@@ -31,91 +31,140 @@
     </nav>
 
     <div class="container mt-4">
-        <div class="row justify-content-center">
-            <div class="col-md-8 shadow py-5 px-3" data-aos="fade-up">
-                <h3 class="display-4">Select your Pizza:</h3>
-                <label for="pizza-size">
-                    <p class="lead text-muted font-weight-bold">Step 1: Pizza Size:</p>
-                </label>
-                <div id="piza-size" class="row justify-content-center">
-                    <div class="col-sm-4">
-                        <label class="radio-inline">
-                            <input name="pizzaSize" id="small" value="small" type="radio" /> Small
-                        </label>
-                    </div>
-                    <div class="col-sm-4">
-                        <label class="radio-inline">
-                            <input name="pizzaSize" id="medium" value="medium" type="radio" /> Medium
-                        </label>
-                    </div>
-                    <div class="col-sm-4">
-                        <label class="radio-inline">
-                            <input name="pizzaSize" id="large" value="large" type="radio" /> Large
-                        </label>
+
+        <div class="row justify-content-between">
+            <div class="col-md-7 shadow py-5 px-3" data-aos="fade-up">
+                <form class="form" id="orderForm">
+                    <h3 class="display-4">Select your Pizza:</h3>
+                    <label for="pizza-size">
+                        <p class="lead text-muted font-weight-bold">Step 1: Pizza Size:</p>
+                    </label>
+                    <div id="piza-size" class="row justify-content-center">
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input name="pizzaSize" id="small" value="small" type="radio" /> Small
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input name="pizzaSize" id="medium" value="medium" type="radio" /> Medium
+                            </label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="radio-inline">
+                                <input name="pizzaSize" id="large" value="large" type="radio" /> Large
+                            </label>
+                        </div>
+
                     </div>
 
+                    <hr>
+
+                    <div class="form-group">
+                        <label for="topping">
+                            <p class="lead text-muted font-weight-bold">Step 2: And topping to your pizza:</p>
+                        </label>
+                        <select id="topping" class="form-control">
+                            <option>Hawaian</option>
+                            <option>Barbeque</option>
+                            <option>Chicken and Cheese</option>
+                            <option>Peperoni</option>
+                            <option>Chicken Tikka</option>
+                        </select>
+                    </div>
+
+                    <hr>
+
+                    <div class="w-100">
+                        <label for="crust">
+                            <p class="lead text-muted font-weight-bold">Step 3: Add crust to your pizza :</p>
+                        </label>
+                        <div id="crust" class="row justify-content-center">
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaCrust" id="crust-crispy" value="crispy" type="radio" /> Crispy
+                                    crust
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaCrust" id="crust-stuffed" value="stuffed" type="radio" /> Stuffed
+                                    crust
+                                </label>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaCrust" id="crust-free" value="sugar-free" type="radio" /> Surprise
+                                    me!
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn btn-success">Add to basket</button>
+                </form>
+
+            </div>
+            <div class="col shadow py-5 px-3 mx-2">
+                <div class="cart">
+                    <h5>Your cart :</h5>
+                    <ul id="cartItems"></ul>
+                    <p class="font-weight-bold" id="basketTotal"></p>
                 </div>
 
-                <hr>
-
-                <div class="form-group">
-                    <label for="topping">
-                        <p class="lead text-muted font-weight-bold">Step 2: And topping to your pizza:</p>
-                    </label>
-                    <select id="topping" class="form-control">
-                        <option>Hawaian</option>
-                        <option>Barbeque</option>
-                        <option>Chicken and Cheese</option>
-                        <option>Peperoni</option>
-                        <option>Chicken Tikka</option>
-                    </select>
+                <div class="delivery">
+                    <h4>Select delivery</h4>
+                    <button type="submit" id="inhouseDelivery" class="btn btn-success">Eating Inhouse</button>
+                    <button type="submit" id="homeDelivery" class="btn btn-info">Deliver to the House</button>
                 </div>
 
-                <hr>
+                <div class="py-4" id="delivery-form">
+                    <form class="form">
+                        <h1>Delivery Address</h1>
 
-                <div class="w-100">
-                    <label for="crust">
-                        <p class="lead text-muted font-weight-bold">Step 3: Add crust to your pizza :</p>
-                    </label>
-                    <div id="crust" class="row justify-content-center">
-                        <div class="col-md-4">
-                            <label class="radio-inline">
-                                <input name="pizzaCrust" id="crust-crispy" value="crispy" type="radio" /> Crispy crust
-                            </label>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="radio-inline">
-                                <input name="pizzaCrust" id="crust-stuffed" value="stuffed" type="radio" /> Stuffed
-                                crust
-                            </label>
-                        </div>
-                        <div class="col-md-4">
-                            <label class="radio-inline">
-                                <input name="pizzaCrust" id="crust-free" value="sugar-free" type="radio" /> Surprise me!
-                            </label>
+                        <div class="form-group">
+                            <label for="House Number">House Number</label>
+                            <input type="text" placeholder="House Number" class="form-control" name="houseNumber" required>
                         </div>
 
-                    </div>
+                        <div class="form-group">
+                            <label for="Street">Street</label>
+                            <input type="text" placeholder="Street name" class="form-control" name="street" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Estate">Estate</label>
+                            <input type="text" placeholder="Enter your Estate" class="form-control" name="estate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNo">Phone Number</label>
+                            <input type="tel" placeholder="Phone number" class="form-control" name="phone" required>
+                        </div>
+
+                        <button type="submit" id="printButton" class="btn btn-info">Print Delivery</button>
+                        <button type="submit" class="btn btn-danger" onclick="closeForm()">Close</button>
+                    </form>
                 </div>
             </div>
-
-
         </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
