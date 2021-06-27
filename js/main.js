@@ -1,5 +1,5 @@
 // pizza object
-function pizza(size, crust, topping) {
+function Pizza(size, crust, topping) {
     this.size = size;
     this.crust = crust;
     this.topping = topping;
@@ -7,7 +7,7 @@ function pizza(size, crust, topping) {
 }
 
 
-pizza.prototype.totalCost = function () {
+Pizza.prototype.totalCost = function () {
     switch (this.size) {
         case "small":
             this.price = 800;
@@ -58,12 +58,40 @@ $(document).ready((e) => {
 
     });
 
+    // more coplex
+    $("#submit-btn").click(function (event) {
+        event.preventDefault();
+        var size = $("input[name='pizzaSize']:checked").val();
+        var crust = $("input[name='pizzaCrust']:checked").val();
+        var topping = $("#topping").children("option:selected").val();        
+        
+        //create pizza
+        var pizza = new Pizza(size, crust, topping);
+        pizza.totalCost();
+        cartTotal += pizza.price;
+        
+        var order = "Size: " + pizza.size + ";Topping: " + pizza.topping + "; Crust: " + pizza.crust + "; Price: " + pizza.price + "/="
+        var total = "Cart Total: " + cartTotal;
+        
+        document.getElementById('orderList').innerHTML = order;
+        document.getElementById('cartTotal').innerHTML = total;
+        cartItems.push(order);
+        
+        document.getElementById('cartItems').innerHTML = " ";
+
+        for (var i = 0; i < cartItems.length; i++) {
+            orderLi = "<li>" + cartItems[i] + "</li>";
+            document.getElementById('cartItems').innerHTML += orderLi;
+        }
+            
+    });
+
     function resetForm() {
         cartItems = [];
         cartTotal = 0;
 
         document.getElementById('orderList').innerHTML = " ";
-        document.getElementById('cartTotal').innerHTML = " ";
+        document.getElementById('cartItems').innerHTML = " ";
         document.getElementById('cartTotal').innerHTML = " ";
 
     }
