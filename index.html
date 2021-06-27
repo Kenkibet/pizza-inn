@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -35,141 +38,201 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center text-white" data-aos="fade-up">
-                    <h1 class="display-4 font-weight-light">Welcome to Ken's Pizza</h1>
+                    <h1 class="display-4 font-weight-light fancy">Welcome to Ken's Pizza</h1>
                     <p class="lead font-weight-bold">A great starter pizza for you</p>
                     <div class="mt-5">
-                        <a class="ct-btn-scroll" href="#about"><img alt="Arrow Down Icon"
-                                src="./images/down.png"></a>
+                        <a class="ct-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="./images/down.png"></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container mt-4">
-        <div class="row justify-content-between">
-            <div class="col-md-7 shadow py-5 px-3" data-aos="fade-up">
-                <form class="form" id="orderForm">
-                    <h3 class="display-4">Select your Pizza:</h3>
-                    <label for="pizza-size">
-                        <p class="lead text-muted font-weight-bold">Step 1: Pizza Size:</p>
-                    </label>
-                    <div id="piza-size" class="row justify-content-center">
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                                <input name="pizzaSize" id="small" value="small" type="radio" /> Small
-                            </label>
-                        </div>
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                                <input name="pizzaSize" id="medium" value="medium" type="radio" /> Medium
-                            </label>
-                        </div>
-                        <div class="col-sm-4">
-                            <label class="radio-inline">
-                                <input name="pizzaSize" id="large" value="large" type="radio" /> Large
-                            </label>
-                        </div>
-
-                    </div>
-
-                    <hr>
-
-                    <div class="form-group">
-                        <label for="topping">
-                            <p class="lead text-muted font-weight-bold">Step 2: And topping to your pizza:</p>
-                        </label>
-                        <select id="topping" class="form-control">
-                            <option>Hawaian</option>
-                            <option>Barbeque</option>
-                            <option>Chicken and Cheese</option>
-                            <option>Peperoni</option>
-                            <option>Chicken Tikka</option>
-                        </select>
-                    </div>
-
-                    <hr>
-
-                    <div class="w-100">
-                        <label for="crust">
-                            <p class="lead text-muted font-weight-bold">Step 3: Add crust to your pizza :</p>
-                        </label>
-                        <div id="crust" class="row justify-content-center">
-                            <div class="col-md-4">
-                                <label class="radio-inline">
-                                    <input name="pizzaCrust" id="crust-crispy" value="crispy" type="radio" /> Crispy
-                                    crust
-                                </label>
-                            </div>
-                            <div class="col-md-4">
-                                <label class="radio-inline">
-                                    <input name="pizzaCrust" id="crust-stuffed" value="stuffed" type="radio" /> Stuffed
-                                    crust
-                                </label>
-                            </div>
-                            <div class="col-md-4">
-                                <label class="radio-inline">
-                                    <input name="pizzaCrust" id="crust-free" value="sugar-free" type="radio" /> Surprise
-                                    me!
-                                </label>
-                            </div>
-
+    <div class="container py-5">
+        <div class="row p-6">
+            <div class="col-12 text-center">
+                <div class="main-content">
+                    <div class="heading">
+                        <div class="title l-1">
+                            Welcome to Ken's Pizza
                         </div>
                     </div>
-                    <button type="submit" id="submit-btn" class="btn btn-success">Add to basket</button>
-                </form>
-
+                    <div class="desc m-auto">
+                        Ken's Pizza was the first pizza restaurant to open in Kenya, the restaurant was designed with
+                        the history
+                        in mind we have created a soft industrial dining room, combined with an open kitchen
+                    </div>
+                </div>
             </div>
-            <div class="col shadow py-5 px-3 mx-2" data-aos="fade-up" data-aos-delay="200">
-                <div class="cart">
-                    <h5>Your current Order :</h5>
-                    <ul class="list-group" id="orderItems"></ul>
-                    <p class="font-weight-bold" id="orderList"></p>
+
+            <div class="col-md-4">
+                <div class="content-col">
+                    <div class="heading">
+                        Daily New Fresh Menus
+                    </div>
+                    <div class="desc autoheight" style="min-height: 0px; max-height: none; height: 100px;">
+                        Ken's Pizza help you treat yourself with a different meal
+                        everyday, thanks to our daily changing menus and
+                        our awesomew creative chefs!
+                    </div>
                 </div>
-                <div class="cart">
-                    <h5>Your cart :</h5>
-                    <div id="cartItems"></div>
-
-                    <ul class="list-group">
-                        <li class="list-group-item active" id="cartTotal"></li>
-                    </ul>
-
-
+            </div>
+            <div class="col-md-4">
+                <div class="content-col">
+                    <div class="heading">
+                        Fresh Ingredient, Tasty Meals
+                    </div>
+                    <div class="desc autoheight" style="min-height: 0px; max-height: none; height: 100px;">
+                        Who said healthy food can't also be delicious?
+                        Ken's Pizza creative chefs use fresh and seasonal
+                        ingredients to make affordable.
+                    </div>
                 </div>
-
-                <div class="delivery">
-                    <h4>Select delivery method</h4>
-                    <button type="submit" id="inhouse" class="btn btn-success">Counter Delivery</button>
-                    <button type="submit" id="homeDelivery" class="btn btn-info">Home Delivery</button>
+            </div>
+            <div class="col-md-4">
+                <div class="content-col">
+                    <div class="heading">
+                        Creative &amp; Talented Chefs
+                    </div>
+                    <div class="desc autoheight" style="min-height: 0px; max-height: none; height: 100px;">
+                        Ken's Pizza have offered a team of culinary professionals
+                        that make delectable dishes at memorable events
+                        for both private client.
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="py-4" id="delivery-form">
-                    <form class="form-delivery" data-aos="fade-up">
-                        <h1>Delivery Address</h1>
+    <div class="food-order">
+        <div class="container pt-5">
+            <div class="row justify-content-between">
+                <div class="col-md-7 shadow py-5 px-3 bg-white" data-aos="fade-up">
+                    <form class="form" id="orderForm">
+                        <h3 class="display-4">Select your Pizza:</h3>
+                        <label for="pizza-size">
+                            <p class="lead text-muted font-weight-bold">Step 1: Pizza Size:</p>
+                        </label>
+                        <div id="piza-size" class="row justify-content-center">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaSize" id="small" value="small" type="radio" /> Small
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaSize" id="medium" value="medium" type="radio" /> Medium
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input name="pizzaSize" id="large" value="large" type="radio" /> Large
+                                </label>
+                            </div>
 
-                        <div class="form-group">
-                            <label for="House Number">House Number</label>
-                            <input type="text" placeholder="House Number" class="form-control" name="houseNumber"
-                                required>
                         </div>
 
+                        <hr>
+
                         <div class="form-group">
-                            <label for="Street">Street</label>
-                            <input type="text" placeholder="Street name" class="form-control" name="street" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="Estate">Estate</label>
-                            <input type="text" placeholder="Enter your Estate" class="form-control" name="estate"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNo">Phone Number</label>
-                            <input type="tel" placeholder="Phone number" class="form-control" name="phone" required>
+                            <label for="topping">
+                                <p class="lead text-muted font-weight-bold">Step 2: And topping to your pizza:</p>
+                            </label>
+                            <select id="topping" class="form-control">
+                                <option>Hawaian</option>
+                                <option>Barbeque</option>
+                                <option>Chicken and Cheese</option>
+                                <option>Peperoni</option>
+                                <option>Chicken Tikka</option>
+                            </select>
                         </div>
 
-                        <button type="submit" id="print" class="btn btn-info">Print Delivery Note</button>
-                        <button type="submit" id="closeForm" class="btn btn-danger">Close</button>
+                        <hr>
+
+                        <div class="w-100">
+                            <label for="crust">
+                                <p class="lead text-muted font-weight-bold">Step 3: Add crust to your pizza :</p>
+                            </label>
+                            <div id="crust" class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <label class="radio-inline">
+                                        <input name="pizzaCrust" id="crust-crispy" value="crispy" type="radio" /> Crispy
+                                        crust
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="radio-inline">
+                                        <input name="pizzaCrust" id="crust-stuffed" value="stuffed" type="radio" />
+                                        Stuffed
+                                        crust
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="radio-inline">
+                                        <input name="pizzaCrust" id="crust-free" value="sugar-free" type="radio" />
+                                        Surprise
+                                        me!
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-success">Add to basket</button>
                     </form>
+
+                </div>
+                <div class="col shadow py-5 px-3 mx-2 bg-white" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cart">
+                        <h5>Your current Order :</h5>
+                        <ul class="list-group" id="orderItems"></ul>
+                        <p class="font-weight-bold" id="orderList"></p>
+                    </div>
+                    <div class="cart">
+                        <h5>Your cart :</h5>
+                        <div id="cartItems"></div>
+
+                        <ul class="list-group">
+                            <li class="list-group-item active" id="cartTotal"></li>
+                        </ul>
+
+
+                    </div>
+
+                    <div class="delivery">
+                        <h4>Select delivery method</h4>
+                        <button type="submit" id="inhouse" class="btn btn-success">Counter Delivery</button>
+                        <button type="submit" id="homeDelivery" class="btn btn-info">Home Delivery</button>
+                    </div>
+
+                    <div class="py-4" id="delivery-form">
+                        <form class="form-delivery" data-aos="fade-up">
+                            <h1>Delivery Address</h1>
+
+                            <div class="form-group">
+                                <label for="House Number">House Number</label>
+                                <input type="text" placeholder="House Number" class="form-control" name="houseNumber"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Street">Street</label>
+                                <input type="text" placeholder="Street name" class="form-control" name="street"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Estate">Estate</label>
+                                <input type="text" placeholder="Enter your Estate" class="form-control" name="estate"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNo">Phone Number</label>
+                                <input type="tel" placeholder="Phone number" class="form-control" name="phone" required>
+                            </div>
+
+                            <button type="submit" id="print" class="btn btn-info">Print Delivery Note</button>
+                            <button type="submit" id="closeForm" class="btn btn-danger">Close</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
