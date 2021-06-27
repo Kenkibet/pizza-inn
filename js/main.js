@@ -63,27 +63,31 @@ $(document).ready((e) => {
         event.preventDefault();
         var size = $("input[name='pizzaSize']:checked").val();
         var crust = $("input[name='pizzaCrust']:checked").val();
-        var topping = $("#topping").children("option:selected").val();        
-        
+        var topping = $("#topping").children("option:selected").val();
+
         //create pizza
         var pizza = new Pizza(size, crust, topping);
         pizza.totalCost();
         cartTotal += pizza.price;
-        
-        var order = "Size: " + pizza.size + ";Topping: " + pizza.topping + "; Crust: " + pizza.crust + "; Price: " + pizza.price + "/="
-        var total = `Cart Total: <span class="float-right font-weight-bold">${cartTotal}</span>`;
-        
+
+        var order = `<div class="alert alert-secondary" role="alert">
+        ${pizza.size} ${pizza.topping} with ${pizza.crust} crust
+        <span class="float-right font-weight-bold">${pizza.price}/=</span>
+      </div>`;
+
+      var total = `Cart Total: <span class="float-right font-weight-bold">${cartTotal}</span>`;
+
         document.getElementById('orderList').innerHTML = order;
         document.getElementById('cartTotal').innerHTML = total;
         cartItems.push(order);
-        
+
         document.getElementById('cartItems').innerHTML = " ";
 
         for (var i = 0; i < cartItems.length; i++) {
-            orderLi = `<li class="list-group-item">${cartItems[i] }</li>`;
+            orderLi = `<li class="list-group-item">${cartItems[i]}</li>`;
             document.getElementById('cartItems').innerHTML += orderLi;
         }
-            
+
     });
 
     function resetForm() {
